@@ -1,5 +1,5 @@
 {
-    "websiteUrl": "https://www.saucedemo.com",
-    "username": "standard_user",
+    "websiteUrl": "https://www.saucedemo.com/v1",
+    "username": ["standard_user", "locked_out_user", "problem_user", "performance_glitch_user"],
     "password": "secret_sauce"
 }
