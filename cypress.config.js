@@ -14,8 +14,12 @@ module.exports = defineConfig({
         html: true,
         json: true,
     },
+    env: {
+        grepFilterSpecs: true,
+    },
     e2e: {
         setupNodeEvents(on, config) {
+            require("@cypress/grep/src/plugin")(config);
             on("after:run", async () => {
                 const jsonReport = await merge({
                     files: ["cypress/reports/mocha/*.json"],
@@ -81,6 +85,7 @@ module.exports = defineConfig({
                     return result.rows;
                 },
             });
+            return config;
         },
     },
 });

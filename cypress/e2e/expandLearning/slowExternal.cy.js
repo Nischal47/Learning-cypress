@@ -30,20 +30,32 @@ describe("Verify input fields", () => {
         });
     });
 
-    it.only('should display all 6 steps of the scientific method', () => {
-        cy.visit('https://practice.expandtesting.com/spies-stubs-clocks');
-        cy.get('#discoverScientificMethod').click();
+    it.only("should display all 6 steps of the scientific method", () => {
+        cy.visit("https://practice.expandtesting.com/spies-stubs-clocks");
+        cy.get("#discoverScientificMethod").click();
         cy.tick(2000);
-        cy.get('[data-testid=step-1]').should('be.visible').and('contain', '1. Ask a Question');
+        cy.get("[data-testid=step-1]")
+            .should("be.visible")
+            .and("contain", "1. Ask a Question");
         cy.tick(2000);
-        cy.get('[data-testid=step-2]').should('be.visible').and('contain', '2. Do Background Research');  
+        cy.get("[data-testid=step-2]")
+            .should("be.visible")
+            .and("contain", "2. Do Background Research");
         cy.tick(2000);
-        cy.get('[data-testid=step-3]').should('be.visible').and('contain', '3. Construct a Hypothesis');
+        cy.get("[data-testid=step-3]")
+            .should("be.visible")
+            .and("contain", "3. Construct a Hypothesis");
         cy.tick(2000);
-        cy.get('[data-testid=step-4]').should('be.visible').and('contain', '4. Test Your Hypothesis by Doing an Experiment');
+        cy.get("[data-testid=step-4]")
+            .should("be.visible")
+            .and("contain", "4. Test Your Hypothesis by Doing an Experiment");
         cy.tick(2000);
-        cy.get('[data-testid=step-5]').should('be.visible').and('contain', '5. Analyze Your Data and Draw a Conclusion');
+        cy.get("[data-testid=step-5]")
+            .should("be.visible")
+            .and("contain", "5. Analyze Your Data and Draw a Conclusion");
         cy.tick(2000);
-        cy.get('[data-testid=step-6]').should('be.visible').and('contain', '6. Communicate Your Results');
-    })
+        cy.get("[data-testid=step-6]")
+            .should("be.visible")
+            .and("contain", "6. Communicate Your Results");
+    });
 });
